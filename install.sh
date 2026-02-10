@@ -6,9 +6,9 @@ pip3 install --upgrade PyAudio
 pip3 install --upgrade mutagen
 pip3 install --upgrade pyinstaller
 # Create bin files.
-pyinstaller --onefile videotomp3.py
-pyinstaller --onefile videotowav.py
-pyinstaller --onefile videotoogg.py
+pyinstaller --onefile --copy-metadata imageio videotomp3.py
+pyinstaller --onefile --copy-metadata imageio videotowav.py
+pyinstaller --onefile --copy-metadata imageio videotoogg.py
 # Move bin files.
 mv dist/videoto* .
 # Delete build files.
